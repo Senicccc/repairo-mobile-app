@@ -25,38 +25,42 @@ class LoyaltyPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Kartu utama poin member
+            // Kartu utama poin member dengan background gradasi
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
                 gradient: LinearGradient(
-                  colors: [Colors.blue.shade900, Colors.blue.shade700],
+                  colors: [Colors.blue.shade900, Colors.blue.shade600],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
-                borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Poin Anda",
-                    style: TextStyle(color: Colors.white70, fontSize: 16),
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                   const SizedBox(height: 8),
-                  const Text(
+                  Text(
                     "245",
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 42,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   const SizedBox(height: 8),
-                  const Text(
+                  Text(
                     "Level: Silver Member",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: const TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   const SizedBox(height: 16),
                   Center(
@@ -78,10 +82,10 @@ class LoyaltyPage extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.qr_code_2,
                           size: 50,
-                          color: Colors.blue.shade900,
+                          color: Colors.blue,
                         ),
                       ),
                     ),
@@ -178,6 +182,7 @@ class LoyaltyPage extends StatelessWidget {
   Widget _buildBenefit(IconData icon, String text) {
     return Card(
       elevation: 2,
+      color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       margin: const EdgeInsets.only(bottom: 10),
       child: ListTile(

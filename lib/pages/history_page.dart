@@ -37,6 +37,7 @@ class HistoryPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(16),
             ),
             elevation: 3,
+            color: Colors.white,
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -60,6 +61,7 @@ class HistoryPage extends StatelessWidget {
                     child: ElevatedButton.icon(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade900,
+                        foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(
                           horizontal: 18,
                           vertical: 12,
